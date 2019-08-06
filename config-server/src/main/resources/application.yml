@@ -22,14 +22,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7777/eureka/
-security:
-  oauth2:
-    resource:
-      id: mall-resource-test
-      user-info-uri: http://localhost:5555/auth/user
-      prefer-token-info: false
 management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh
+        include: "bus-refresh"
