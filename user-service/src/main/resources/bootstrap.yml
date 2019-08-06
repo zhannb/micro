@@ -1,14 +1,26 @@
-
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7777/eureka/
+server:
+  port: 8080
+spring:
+  application:
+    name: user-server
+#  profiles:
+#    active: dev
   cloud:
     config:
-      name: user
       profile: dev
       uri: http://localhost:7770/
-      label: master
+
+security:
+  oauth2:
+    resource:
+      id: mall-resource-test
+      user-info-uri: http://localhost:5555/auth/user
+      prefer-token-info: false
+
 
 
 

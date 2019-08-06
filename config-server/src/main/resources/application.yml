@@ -5,12 +5,14 @@ spring:
     name: config-server
   cloud:
     config:
+      enabled: true
       server:
         git:
-          uri: https://github.com/iamcrawler/micro-config
-          search-paths:
+          uri: https://github.com/iamcrawler/micro-oauth
+          search-paths: config-repo
           username: iamcrawler
           password: lljy1234
+        bootstrap: true
 eureka:
   client:
     service-url:

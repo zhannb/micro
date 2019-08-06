@@ -9,13 +9,5 @@ spring:
     port: 6379
     password:
     database: 0
-
-security:
-  oauth2:
-    resource:
-      id: mall-resource-test
-      user-info-uri: http://localhost:5555/auth/user
-      prefer-token-info: false
-
 crawler:
-  test: liuliang-123
+  test: liuliang
