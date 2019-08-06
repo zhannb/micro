@@ -13,11 +13,21 @@ spring:
           username: iamcrawler
           password: lljy1234
         bootstrap: true
+  rabbitmq:
+    host: www.iamcrawler.cn
+    port: 5672
+    username: liuliang
+    password: liuliang
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7777/eureka/
-
+security:
+  oauth2:
+    resource:
+      id: mall-resource-test
+      user-info-uri: http://localhost:5555/auth/user
+      prefer-token-info: false
 management:
   endpoints:
     web:
