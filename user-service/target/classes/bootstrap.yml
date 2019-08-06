@@ -11,6 +11,15 @@ spring:
     config:
       profile: dev
       uri: http://localhost:7770/
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: www.iamcrawler.cn
+    port: 5672
+    username: liuliang
+    password: liuliang
+
 
 security:
   oauth2:
@@ -18,6 +27,11 @@ security:
       id: mall-resource-test
       user-info-uri: http://localhost:5555/auth/user
       prefer-token-info: false
+
+
+management:
+  security:
+    enabled: false
 
 
 
