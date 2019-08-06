@@ -36,3 +36,14 @@ zuul:
       serviceId: order-server
       strip-prefix: true
       custom-sensitive-headers: true
+    feign-config:
+      path: /config/**
+      serviceId: config-server
+      strip-prefix: true
+      custom-sensitive-headers: true
+  host:
+    connect-timeout-millis: 15000 #HTTP连接超时要比Hystrix的大
+    socket-timeout-millis: 60000   #socket超时
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000

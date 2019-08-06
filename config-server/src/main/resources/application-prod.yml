@@ -1,0 +1,20 @@
+server:
+  port: 7770
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/iamcrawler/micro
+          search-paths: config-server
+          username: iamcrawler@sina.com
+          password: lljy1234
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7777/eureka/
+
+neo:
+  hello: hello i am prod
