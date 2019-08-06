@@ -16,7 +16,7 @@ public class HelloController {
     @Autowired
     private OrderClient orderClient;
 
-    @Value("${crawler.test}")
+    @Value("${crawler.test:}")
     private String crawler;
 
     @GetMapping("/hello")

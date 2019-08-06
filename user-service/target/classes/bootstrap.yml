@@ -5,10 +5,11 @@ eureka:
       defaultZone: http://localhost:7777/eureka/
   cloud:
     config:
-      uri: http://localhost:5555/config/
+      name: user
       profile: dev
+      uri: http://localhost:7770/
       label: master
-      name: application
+
 
 
 
