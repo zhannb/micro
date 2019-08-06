@@ -7,8 +7,6 @@ server:
 spring:
   application:
     name: user-server
-#  profiles:
-#    active: dev
   cloud:
     config:
       profile: dev

@@ -8,7 +8,7 @@ spring:
       enabled: true
       server:
         git:
-          uri: https://github.com/iamcrawler/micro-oauth
+          uri: https://github.com/iamcrawler/micro
           search-paths: config-repo
           username: iamcrawler
           password: lljy1234

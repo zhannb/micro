@@ -5,16 +5,15 @@ spring:
     name: config-server
   cloud:
     config:
+      enabled: true
       server:
         git:
           uri: https://github.com/iamcrawler/micro
-          search-paths: config-server
-          username: iamcrawler@sina.com
+          search-paths: config-repo
+          username: iamcrawler
           password: lljy1234
+        bootstrap: true
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7777/eureka/
-
-neo:
-  hello: hello i am prod
