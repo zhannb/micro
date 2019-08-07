@@ -7,18 +7,18 @@ server:
 spring:
   application:
     name: user-server
-  cloud:
-    config:
-      profile: dev
-      uri: http://localhost:7770/
-    bus:
-      trace:
-        enabled: true
-  rabbitmq:
-    host: www.iamcrawler.cn
-    port: 5672
-    username: liuliang
-    password: liuliang
+#  cloud:
+#    config:
+#      profile: dev
+#      uri: http://localhost:7770/
+#    bus:
+#      trace:
+#        enabled: true
+#  rabbitmq:
+#    host: www.iamcrawler.cn
+#    port: 5672
+#    username: liuliang
+#    password: liuliang
   sleuth:
     web:
       client:
