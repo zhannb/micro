@@ -13,6 +13,14 @@ spring:
     port: 6379
     password:
     database: 1
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0 # 采用比例，默认 0.1 全部采样 1.0
+  zipkin:
+    base-url: http://localhost:7771/ # 指定了Zipkin服务器的地址
 eureka:
   client:
     service-url:

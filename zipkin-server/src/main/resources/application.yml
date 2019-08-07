@@ -1,0 +1,47 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7777/eureka/
+  instance:
+    # 解决健康节点权限问题 将用户名及密码放入eureka的元数据中
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+
+spring:
+  application:
+    name: zipkin-server
+  security:
+    user:
+      name: liuliang
+      password: liuliang123
+server:
+  port: 7771
+
+
+
+
+
+
+# 客户端负载均衡器
+ribbon:
+  ConnectTimeout: 3000 # 客户端连接超时
+  ReadTimeout: 60000 # 客户端读取超时
+  MaxAutoRetries: 1 # 当前环境最大重试次数
+  MaxAutoRetriesNextServer: 2 # 其他环境最大重试次数
+  eureka:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+
+# 关闭自动配置启用所有请求得检测
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: true

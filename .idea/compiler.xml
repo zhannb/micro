@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="zipkin-server" />
         <module name="eureka-server" />
         <module name="config-server" />
         <module name="common-server" />
@@ -24,6 +25,7 @@
       <module name="eureka-server" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
+      <module name="zipkin-server" options="-parameters" />
       <module name="zuul-server" options="-parameters" />
     </option>
   </component>
