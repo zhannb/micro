@@ -42,7 +42,7 @@ zuul:
       strip-prefix: true
       custom-sensitive-headers: true
   host:
-    connect-timeout-millis: 15000 #HTTP连接超时要比Hystrix的大
+    connect-timeout-millis: 60000 #HTTP连接超时要比Hystrix的大
     socket-timeout-millis: 60000   #socket超时
 
 
@@ -56,5 +56,5 @@ hystrix:
 
 
 ribbon:
-  ReadTimeout: 60000
-  ConnectTimeout: 60000
+  ReadTimeout: 100000
+  ConnectTimeout: 100000

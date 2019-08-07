@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c39e176a-cfbc-4ebe-b500-ea1f5e87fc13" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config-repo/user-server-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-repo/user-server-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/code/user/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/code/user/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/code/zuul/fallback/MicroFallbackProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/code/zuul/model/Msg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/eureka-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/eureka-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/target/classes/bootstrap.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/order-service/target/" />
@@ -26,24 +30,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/bootstrap.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="28" column="14" lean-forward="true" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user-service/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="64" column="19" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="64" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/code/user/UserServiceApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
@@ -52,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config-repo/user-server-dev.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="20" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="105">
+              <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -64,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config-server/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
+            <state relative-caret-position="420">
               <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="47" selection-end-column="21" />
             </state>
           </provider>
@@ -73,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/code/config/ConfigApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
+            <state relative-caret-position="84">
               <caret line="7" selection-start-line="7" selection-end-line="16" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -85,12 +71,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/code/user/controller/HelloController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="37" selection-end-column="1" />
+            <state relative-caret-position="63">
+              <caret line="11" selection-start-line="11" selection-end-line="37" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#948#949#0" expanded="true" />
-                <element signature="e#983#984#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret lean-forward="true" selection-end-line="28" selection-end-column="30" />
+              <caret selection-end-line="28" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -108,8 +92,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zuul-server/src/main/resources/bootstrap.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="339">
+              <caret line="59" column="24" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/code/zuul/fallback/MicroFallbackProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/code/zuul/model/Msg.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,7 +122,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/code/user/config/ResourceServerConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
+            <state relative-caret-position="252">
               <caret line="15" column="34" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="34" />
             </state>
           </provider>
@@ -140,6 +145,7 @@
       <find>EndpointHandlerMapping</find>
       <find>/actuator/bus-refresh</find>
       <find>bus-refresh</find>
+      <find>connection-timeout</find>
     </findStrings>
     <replaceStrings>
       <replace>conn.stringCommands().set(accessKey, serializedAccessToken);</replace>
@@ -183,7 +189,6 @@
         <option value="$PROJECT_DIR$/config-server/src/main/resources/user-dev.yml" />
         <option value="$PROJECT_DIR$/user-service/src/main/resources/user-server-dev.yml" />
         <option value="$PROJECT_DIR$/user-service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/zuul-server/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/config-server/src/main/resources/application-prod.yml" />
         <option value="$PROJECT_DIR$/config-server/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/user-service/pom.xml" />
@@ -195,6 +200,9 @@
         <option value="$PROJECT_DIR$/config-server/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/code/user/controller/HelloController.java" />
         <option value="$PROJECT_DIR$/config-repo/user-server-dev.yml" />
+        <option value="$PROJECT_DIR$/zuul-server/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/code/zuul/model/Msg.java" />
+        <option value="$PROJECT_DIR$/zuul-server/src/main/java/com/code/zuul/fallback/MicroFallbackProvider.java" />
       </list>
     </option>
   </component>
@@ -231,7 +239,7 @@
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="947" />
@@ -245,7 +253,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -256,124 +263,6 @@
             <path>
               <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
               <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="config-repo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="config-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="config-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="config-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="config-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="config-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="config-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="config-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
-              <item name="user-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
-              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
               <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -388,6 +277,43 @@
               <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="fallback" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micro-oauth" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="micro-oauth" type="b2602c69:ProjectViewProjectNode" />
@@ -405,6 +331,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -450,7 +377,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConfigApplication">
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration name="AuthServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="auth-server" />
       <extension name="coverage">
@@ -551,18 +478,19 @@
       <option name="presentableId" value="Default" />
       <updated>1564972929217</updated>
       <workItem from="1564972931502" duration="3795000" />
-      <workItem from="1564989247311" duration="27812000" />
+      <workItem from="1564989247311" duration="28232000" />
+      <workItem from="1565141012475" duration="3837000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31607000" />
+    <option name="totallyTimeSpent" value="35864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22283272" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22527473" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -573,12 +501,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32982457" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.41520467" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.26666668" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.19883041" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.19883041" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -601,20 +529,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/eureka-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/auth-server/src/main/java/com/code/auth/config/OAuth2AuthorizationServerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -690,23 +604,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/order-service/src/main/java/com/code/order/config/FeignHeadConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="33" column="69" lean-forward="true" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/code/user/config/FeignHeadConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="35" column="43" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/order-service/src/main/java/com/code/order/config/FeignHeadConfiguration.java" />
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/code/user/config/FeignHeadConfiguration.java" />
     <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/code/user/config/FeignConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -863,13 +762,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/user-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/user-dev.yml" />
     <entry file="file://$PROJECT_DIR$/auth-server/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -890,13 +783,7 @@
     <entry file="file://$PROJECT_DIR$/config-repo/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/user-server-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/user-server-dev.yml" />
     <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application-prod.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
@@ -918,58 +805,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/code/user/config/ResourceServerConfig.java">
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/code/config/config/ResourceServerConfig.java" />
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/code/config/config/ResourceServerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="47" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/code/config/ConfigApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" selection-start-line="7" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="28" selection-end-column="30" />
+        <state relative-caret-position="588">
+          <caret line="28" column="14" selection-end-line="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="64" column="19" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="64" selection-end-column="19" />
+        <state relative-caret-position="1344">
+          <caret line="64" column="19" selection-start-line="13" selection-start-column="3" selection-end-line="64" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -980,29 +827,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/bootstrap.yml">
+    <entry file="file://$PROJECT_DIR$/config-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="28" column="14" lean-forward="true" selection-end-line="41" />
+        <state relative-caret-position="420">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="47" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/code/config/ConfigApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="7" selection-start-line="7" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/code/user/controller/HelloController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="37" selection-end-column="1" />
+        <state relative-caret-position="63">
+          <caret line="11" selection-start-line="11" selection-end-line="37" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="28" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/code/user/config/ResourceServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config-repo/user-server-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="105">
+          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="59" column="24" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/code/zuul/model/Msg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-server/src/main/java/com/code/zuul/fallback/MicroFallbackProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
         </state>
       </provider>
     </entry>
