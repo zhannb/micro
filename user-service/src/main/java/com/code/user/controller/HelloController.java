@@ -1,6 +1,8 @@
 package com.code.user.controller;
 
+import com.code.user.entity.MicroTest;
 import com.code.user.feign.OrderClient;
+import com.code.user.service.MicroTestService;
 import com.code.user.util.MicroUserUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,9 @@ public class HelloController {
     @Autowired
     private OrderClient orderClient;
 
+    @Autowired
+    private MicroTestService microTestService;
+
     @Value("${crawler.test:}")
     private String crawler;
 
@@ -32,6 +37,12 @@ public class HelloController {
     @GetMapping("/crawler")
     public String crawler(){
         return this.crawler;
+    }
+
+
+    @GetMapping("/micro/i18n/test")
+    public MicroTest getTest(){
+      return   microTestService.getTest();
     }
 
 

@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -23,10 +24,15 @@ public class DomainUserDetailsService implements UserDetailsService {
     @Resource
     private MicroService userService ;
 
+    @Resource
+    private BCryptPasswordEncoder passwordEncoder;
+
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         MicroUser microUser = userService.getOne(new QueryWrapper<MicroUser>().eq("name", s));
         log.info("user:"+microUser.getName()+" login success!");
+        String encode = passwordEncoder.encode(microUser.getPassword());
+        microUser.setPassword(encode);
         return microUser;
     }
 

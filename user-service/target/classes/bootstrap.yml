@@ -3,22 +3,27 @@ eureka:
     service-url:
       defaultZone: http://localhost:7777/eureka/
 server:
-  port: 8080
+  port: 8090
 spring:
+  datasource:
+    url: jdbc:mysql://www.iamcrawler.cn:3306/micro?serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name:  com.mysql.jdbc.Driver
   application:
     name: user-server
-#  cloud:
-#    config:
-#      profile: dev
-#      uri: http://localhost:7770/
-#    bus:
-#      trace:
-#        enabled: true
-#  rabbitmq:
-#    host: www.iamcrawler.cn
-#    port: 5672
-#    username: liuliang
-#    password: liuliang
+  cloud:
+    config:
+      profile: dev
+      uri: http://localhost:7770/
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: www.iamcrawler.cn
+    port: 5672
+    username: liuliang
+    password: liuliang
   sleuth:
     web:
       client:
@@ -27,7 +32,8 @@ spring:
       probability: 1.0 # 采用比例，默认 0.1 全部采样 1.0
   zipkin:
     base-url: http://localhost:7771/ # 指定了Zipkin服务器的地址
-
+  liquibase:
+    change-log: classpath:liquibase\master.xml
 
 
 security:
@@ -44,6 +50,10 @@ management:
       exposure:
         include: bus-refresh
 
+mybatis-plus:
+  type-aliases-package: com.code.user.entity
+  mapper-locations: classpath:com/code/user/mapper/*.xml
+  type-handlers-package: com.code.user.mapper.typehandler
 
 
 
