@@ -3,17 +3,22 @@ package com.code.auth.security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 
+import javax.annotation.Resource;
 import java.util.Objects;
 
 /**
@@ -26,36 +31,23 @@ import java.util.Objects;
 //开启权限认证
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-//    @Autowired
-//    public void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.userDetailsService(userDetailsService()).passwordEncoder(bCryptPasswordEncoder());
-//    }
 
-    @Autowired
-    private DomainUserDetailsService userDetailsService;
+    @Bean
+    PasswordEncoder passwordEncoder(){
+        return NoOpPasswordEncoder.getInstance();
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService() {
+        return new DomainUserDetailsService();
+    }
+
 
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService);
+        auth.userDetailsService(userDetailsService());
     }
-
-//    @Bean
-//    public PasswordEncoder passwordEncoder() {
-//        return new PasswordEncoder() {
-//            @Override
-//            public String encode(CharSequence charSequence) {
-//                return charSequence.toString();
-//            }
-//
-//            @Override
-//            public boolean matches(CharSequence charSequence, String s) {
-//                return Objects.equals(charSequence.toString(),s);
-//            }
-//        };
-//    }
-
-
 
 
     /**
@@ -70,18 +62,22 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 
 
-
-
+    /**
+     * http安全配置
+     * @param http http安全对象
+     * @throws Exception http安全异常信息
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        // @formatter:off
-        http.csrf().disable();
+//        http.userDetailsService(userDetailsService());
         http
-                .requestMatchers().anyRequest()
+                .authorizeRequests()
+                .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/oauth/*").permitAll()
-        ;
+                .antMatchers("/oauth/token").permitAll()
+                .anyRequest().authenticated()
+                .and().httpBasic().and().csrf().disable() ; // 禁用csrf
     }
 
 

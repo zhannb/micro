@@ -34,21 +34,29 @@ spring:
     base-url: http://localhost:7771/ # 指定了Zipkin服务器的地址
   liquibase:
     change-log: classpath:liquibase\master.xml
-
+#feign:
+#  hystrix:
+#    enabled: true
 
 security:
   oauth2:
     resource:
       id: mall-resource-test
       user-info-uri: http://localhost:5555/auth/user
-      prefer-token-info: false
-
+      token-info-uri: http://localhost:5555/auth/oauth/check_token
+      user-authorization-uri: http://localhost:5555/auth/oauth/authorize
+      prefer-token-info: true
 
 management:
   endpoints:
     web:
       exposure:
         include: bus-refresh
+
+#logging:
+#  level:
+#    org.springframework: DEBUG
+
 
 mybatis-plus:
   type-aliases-package: com.code.user.entity

@@ -2,7 +2,6 @@ package com.code.user.service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.code.user.entity.MicroTest;
-import com.code.user.entity.MicroUser;
 import com.code.user.interceptor.service.BaseI18nService;
 import com.code.user.mapper.MicroTestMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +21,8 @@ public class MicroTestService  extends ServiceImpl<MicroTestMapper, MicroTest> {
         MicroTest microTest = baseI18nService.selectOneBaseTableInfoWithI18n(1L, MicroTest.class);
         return microTest;
     }
+
+
 
 
 }

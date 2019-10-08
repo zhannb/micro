@@ -89,5 +89,34 @@
             <version>1.0.29</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-core</artifactId>
+            <version>1.5.12</version>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>com.codingapi.txlcn</groupId>-->
+<!--            <artifactId>txlcn-tc</artifactId>-->
+<!--            <version>5.0.2.RELEASE</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>com.codingapi.txlcn</groupId>-->
+<!--            <artifactId>txlcn-tm</artifactId>-->
+<!--            <version>5.0.2.RELEASE</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>com.codingapi.txlcn</groupId>-->
+<!--            <artifactId>txlcn-txmsg-netty</artifactId>-->
+<!--            <version>5.0.2.RELEASE</version>-->
+<!--        </dependency>-->
+
     </dependencies>
+
+    <build>
+        <finalName>crawler-user</finalName>
+    </build>
 </project>

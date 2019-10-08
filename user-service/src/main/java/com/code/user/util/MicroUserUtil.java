@@ -3,9 +3,17 @@ package com.code.user.util;
 import com.code.user.entity.MicroUser;
 import com.code.user.feign.AuthFeign;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.context.SecurityContextImpl;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
+import org.springframework.web.context.request.RequestAttributes;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 /**
@@ -28,7 +36,16 @@ public class MicroUserUtil {
      * @return
      */
     public  static MicroUser getCurrentUser(){
-        MicroUser o = authFeign.getCurrentUser();
+
+        Authentication authentication = SecurityContextHolder
+                .getContext()
+                .getAuthentication();
+
+        MicroUser o = (MicroUser)SecurityContextHolder
+                .getContext()
+                .getAuthentication()
+                .getPrincipal();
+
         if(!ObjectUtils.isEmpty(o)){
             return o;
         }

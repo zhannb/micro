@@ -1,0 +1,69 @@
+version: '2'
+
+services:
+  crawler-eureka:
+    image: crawler/crawler-eureka:v1.0.0
+    restart: always
+    container_name: crawler-eureka
+    hostname: crawler-eureka
+    ports:
+      - "7770:7770"
+
+  crawler-config:
+    image: crawler/crawler-config:v1.0.0
+    restart: always
+    container_name: crawler-config
+    hostname: crawler-config
+    ports:
+      - "7771:7771"
+    depends_on:
+      - crawler-eureka
+
+
+  crawler-zipkin:
+    image: crawler/crawler-zipkin:v1.0.0
+    restart: always
+    container_name: crawler-zipkin
+    hostname: crawler-zipkin
+    ports:
+      - "7773:7773"
+    depends_on:
+      - crawler-eureka
+
+  crawler-zuul:
+    image: crawler/crawler-zuul:v1.0.0
+    restart: always
+    container_name: crawler-zuul
+    hostname: crawler-zuul
+    ports:
+      - "7772:7772"
+    depends_on:
+      - crawler-eureka
+      - crawler-zipkin
+    volumes:
+      - /Volumes:/Volumes
+
+  crawler-auth:
+    image: crawler/crawler-auth:v1.0.0
+    restart: always
+    container_name: crawler-auth
+    hostname: crawler-auth
+    ports:
+      - "7774:7774"
+    depends_on:
+      - crawler-eureka
+
+  crawler-user:
+    image: crawler/crawler-user:v1.0.0
+    restart: always
+    container_name: crawler-user
+    hostname: crawler-user
+    ports:
+      - "7775:7775"
+    depends_on:
+      - crawler-eureka
+      - crawler-zipkin
+      - crawler-config
+      - crawler-zuul
+      - crawler-auth
+    working_dir: /usr/local/tomcat/project/micro-oauth/

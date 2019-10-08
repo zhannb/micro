@@ -50,4 +50,7 @@
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
     </dependencies>
+    <build>
+        <finalName>crawler-order</finalName>
+    </build>
 </project>

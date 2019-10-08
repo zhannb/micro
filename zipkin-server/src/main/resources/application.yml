@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7777/eureka/
+      defaultZone: http://crawler-eureka:7770/eureka/
   instance:
     # 解决健康节点权限问题 将用户名及密码放入eureka的元数据中
     metadata-map:
@@ -10,13 +10,13 @@ eureka:
 
 spring:
   application:
-    name: zipkin-server
+    name: crawler-zipkin
   security:
     user:
       name: liuliang
       password: liuliang123
 server:
-  port: 7771
+  port: 7773
 
 
 

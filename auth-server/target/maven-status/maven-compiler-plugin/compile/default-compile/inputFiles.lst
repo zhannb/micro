@@ -1,0 +1,15 @@
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/config/OAuth2AuthorizationServerConfig.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/controller/MicroUserController.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/mapper/UserInfoRepository.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/entity/MicroUser.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/model/UserInfo.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/service/MicroService.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/security/SecurityConfiguration.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/security/MyUserDetailsService.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/security/AuthorizationServerConfiguration.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/security/OAuth2ServerConfig.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/AuthServerApplication.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/security/ResourceServerConfiguration.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/security/MicroRedisTokenStore.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/mapper/MicroUserMapper.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/auth-server/src/main/java/com/code/auth/security/DomainUserDetailsService.java
