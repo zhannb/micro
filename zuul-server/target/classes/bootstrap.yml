@@ -1,6 +1,6 @@
 spring:
   application:
-    name: zuul-server
+    name: crawler-zuul
   datasource:
     url: jdbc:mysql://www.iamcrawler.cn:3306/micro?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC
     username: root
@@ -18,13 +18,13 @@ spring:
     sampler:
       probability: 1.0 # 采用比例，默认 0.1 全部采样 1.0
   zipkin:
-    base-url: http://localhost:7771/ # 指定了Zipkin服务器的地址
+    base-url: http://crawler-zipkin:7773/ # 指定了Zipkin服务器的地址
 server:
-  port: 5555
+  port: 7772
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:7777/eureka/
+      defaultZone: http://crawler-eureka:7770/eureka/
 
 
 zuul:

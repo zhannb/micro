@@ -1,0 +1,6 @@
+/Users/liuliang/Documents/codes/crawler/micro-oauth/order-service/src/main/java/com/code/order/config/ResourceServerConfig.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/order-service/src/main/java/com/code/order/OrderServiceApplication.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/order-service/src/main/java/com/code/order/controller/OrderController.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/order-service/src/main/java/com/code/order/feign/AuthFeign.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/order-service/src/main/java/com/code/order/config/FeignConfig.java
+/Users/liuliang/Documents/codes/crawler/micro-oauth/order-service/src/main/java/com/code/order/feign/MicroUser.java

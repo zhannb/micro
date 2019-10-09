@@ -39,3 +39,16 @@ cd crawler-auth
 mvn clean package docker:build
 
 cd ..
+
+
+cd crawler-user
+
+mvn clean package docker:build
+
+cd ..
+
+cd crawler-zipkin
+
+mvn clean package docker:build
+
+cd ..

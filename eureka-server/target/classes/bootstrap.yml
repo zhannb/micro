@@ -1,5 +1,5 @@
 server:
-  port: 7777
+  port: 7770
 eureka:
   instance:
     hostname: localhost
@@ -7,4 +7,8 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${spring.application.name}:${server.port}/eureka/
+
+spring:
+  application:
+    name: crawler-eureka

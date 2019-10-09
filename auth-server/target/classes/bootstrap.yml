@@ -1,12 +1,12 @@
 server:
-  port: 8888
+  port: 7774
 spring:
   application:
-    name: auth-server
+    name: crawler-auth
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:7777/eureka/
+      defaultZone: http://crawler-eureka:7770/eureka/
 
 
 security:
