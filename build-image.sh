@@ -22,32 +22,32 @@ mvn clean package docker:build
 
 cd ..
 
-cd crawler-config
+cd config-server
 
 mvn clean package docker:build
 
 cd ..
 
-cd crawler-zuul
+cd zuul-server
 
 mvn clean package docker:build
 
 cd ..
 
-cd crawler-auth
+cd auth-server
 
 mvn clean package docker:build
 
 cd ..
 
 
-cd crawler-user
+cd user-server
 
 mvn clean package docker:build
 
 cd ..
 
-cd crawler-zipkin
+cd zipkin-server
 
 mvn clean package docker:build
 
