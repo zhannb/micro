@@ -6,14 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="zipkin-server" />
         <module name="eureka-server" />
         <module name="config-server" />
-        <module name="common-server" />
-        <module name="order-service" />
-        <module name="zuul-server" />
         <module name="user-service" />
+        <module name="txlcn-common" />
+        <module name="common-server" />
+        <module name="zuul-server" />
+        <module name="txlcn-tm" />
+        <module name="txlcn-txmsg" />
         <module name="auth-server" />
+        <module name="order-service" />
+        <module name="txlcn-logger" />
+        <module name="zipkin-server" />
+        <module name="txlcn-tc" />
+        <module name="txlcn-txmsg-netty" />
+        <module name="txlcn-tracing" />
       </profile>
     </annotationProcessing>
   </component>
@@ -24,6 +31,13 @@
       <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="order-service" options="-parameters" />
+      <module name="txlcn-common" options="-parameters -Xlint:deprecation" />
+      <module name="txlcn-logger" options="-parameters -Xlint:deprecation" />
+      <module name="txlcn-tc" options="-parameters -Xlint:deprecation" />
+      <module name="txlcn-tm" options="-parameters -Xlint:deprecation" />
+      <module name="txlcn-tracing" options="-parameters -Xlint:deprecation" />
+      <module name="txlcn-txmsg" options="-parameters -Xlint:deprecation" />
+      <module name="txlcn-txmsg-netty" options="-parameters -Xlint:deprecation" />
       <module name="user-service" options="-parameters" />
       <module name="zipkin-server" options="-parameters" />
       <module name="zuul-server" options="-parameters" />

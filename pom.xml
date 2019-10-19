@@ -13,6 +13,7 @@
         <module>common-server</module>
         <module>config-server</module>
         <module>zipkin-server</module>
+        <module>tx-lcn</module>
     </modules>
 
     <parent>

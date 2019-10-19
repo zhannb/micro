@@ -15,7 +15,7 @@ spring:
   cloud:
     config:
       profile: dev
-      uri: http://crawler-config:7771/
+      uri: http://localhost:7771/
     bus:
       trace:
         enabled: true
@@ -31,7 +31,7 @@ spring:
     sampler:
       probability: 1.0 # 采用比例，默认 0.1 全部采样 1.0
   zipkin:
-    base-url: http://crawler-zipkin:7773/ # 指定了Zipkin服务器的地址
+    base-url: http://localhost:7773/ # 指定了Zipkin服务器的地址
   liquibase:
     change-log: classpath:liquibase\master.xml
 #feign:
@@ -42,9 +42,9 @@ security:
   oauth2:
     resource:
       id: mall-resource-test
-      user-info-uri: http://crawler-zuul:7772/auth/user
-      token-info-uri: http://crawler-zuul:7772/auth/oauth/check_token
-      user-authorization-uri: http://crawler-zuul:7772/auth/oauth/authorize
+      user-info-uri: http://localhost:7772/auth/user
+      token-info-uri: http://localhost:7772/auth/oauth/check_token
+      user-authorization-uri: http://localhost:7772/auth/oauth/authorize
       prefer-token-info: true
 
 management:
