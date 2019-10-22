@@ -17,8 +17,8 @@ public class MicroTest extends BaseI18nDomain {
 
     private String name;
 
-    @I18nField
-    private String desc;
+//    @I18nField
+    private String description;
 
     private Integer age;
 

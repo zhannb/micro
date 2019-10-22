@@ -12,7 +12,7 @@ eureka:
 security:
   oauth2:
     resource:
-      filter-order: 3
+      filter-order: 99
 #
 #logging:
 #  level:

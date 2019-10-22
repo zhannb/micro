@@ -52,25 +52,39 @@
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.codingapi.txlcn</groupId>
+            <artifactId>txlcn-tc</artifactId>
+            <version>5.0.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.codingapi.txlcn</groupId>
+            <artifactId>txlcn-txmsg-netty</artifactId>
+            <version>5.0.2.RELEASE</version>
+        </dependency>
 
 
-    <dependency>
-        <groupId>com.codingapi.txlcn</groupId>
-        <artifactId>txlcn-tc</artifactId>
-        <version>${codingapi.txlcn.version}</version>
-    </dependency>
+        <!--liquibase依赖-->
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+        </dependency>
 
-    <dependency>
-        <groupId>com.codingapi.txlcn</groupId>
-        <artifactId>txlcn-tm</artifactId>
-        <version>${codingapi.txlcn.version}</version>
-    </dependency>
+        <!--mybatis-plus-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.1.0</version>
+        </dependency>
 
-    <dependency>
-        <groupId>com.codingapi.txlcn</groupId>
-        <artifactId>txlcn-txmsg-netty</artifactId>
-        <version>${codingapi.txlcn.version}</version>
-    </dependency>
+        <!--数据源实现类所在包-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.29</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>crawler-order</finalName>

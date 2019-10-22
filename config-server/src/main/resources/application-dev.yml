@@ -2,7 +2,7 @@ server:
   port: 7778
 spring:
   application:
-    name: config-server
+    name: crawler-config
   cloud:
     config:
       enabled: true

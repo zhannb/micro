@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 //@Order(6)
 public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 
-    private static final String DEMO_RESOURCE_ID = "mall-resource-test";
+    private static final String DEMO_RESOURCE_ID = "test";
 
 
     @Override

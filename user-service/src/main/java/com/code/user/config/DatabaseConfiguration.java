@@ -82,7 +82,7 @@ public class DatabaseConfiguration {
         MybatisSqlSessionFactoryBean mybatisSqlSessionFactoryBean = new MybatisSqlSessionFactoryBean();
         mybatisSqlSessionFactoryBean.setDataSource(dataSource());
         mybatisSqlSessionFactoryBean.setVfs(SpringBootVFS.class);
-        mybatisSqlSessionFactoryBean.setPlugins(getInterceptors());
+//        mybatisSqlSessionFactoryBean.setPlugins(getInterceptors());
         //sqlsession实体类
         if (StringUtils.hasLength(properties.getTypeAliasesPackage())) {
             mybatisSqlSessionFactoryBean.setTypeAliasesPackage(properties.getTypeAliasesPackage());

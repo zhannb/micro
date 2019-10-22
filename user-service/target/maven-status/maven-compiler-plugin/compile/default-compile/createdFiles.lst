@@ -21,6 +21,7 @@ com/code/user/interceptor/util/SqlExecutionUtil.class
 com/code/user/interceptor/annotation/I18nField.class
 com/code/user/interceptor/domain/BaseI18nDomain.class
 com/code/user/config/ResourceServerConfig.class
+com/code/user/config/FeignConfig.class
 com/code/user/entity/MicroUser.class
 com/code/user/interceptor/annotation/EnableBaseI18nService.class
 com/code/user/interceptor/util/PackageScanUtil.class

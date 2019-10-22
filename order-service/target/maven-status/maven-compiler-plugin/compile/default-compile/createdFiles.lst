@@ -1,7 +1,11 @@
+com/code/order/config/DatabaseConfiguration.class
+com/code/order/controller/OrderController.class
+com/code/order/feign/AuthFeign.class
+com/code/order/OrderServiceApplication.class
+com/code/order/mapper/OrderTestMapper.class
 com/code/order/config/ResourceServerConfig.class
 com/code/order/feign/MicroUser$MicroUserBuilder.class
 com/code/order/config/FeignConfig.class
-com/code/order/controller/OrderController.class
+com/code/order/service/OrderTestService.class
+com/code/order/entity/OrderTest.class
 com/code/order/feign/MicroUser.class
-com/code/order/feign/AuthFeign.class
-com/code/order/OrderServiceApplication.class

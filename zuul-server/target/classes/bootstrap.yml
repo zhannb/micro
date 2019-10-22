@@ -31,27 +31,32 @@ zuul:
   routes:
     feign-auth:
       path: /auth/**
-      serviceId: auth-server
+      serviceId: crawler-auth
       strip-prefix: true
       custom-sensitive-headers: true
     feign-user:
       path: /user/**
-      serviceId: user-server
+      serviceId: crawler-user
       strip-prefix: true
       custom-sensitive-headers: true
     feign-order:
       path: /order/**
-      serviceId: order-server
+      serviceId: crawler-order
       strip-prefix: true
       custom-sensitive-headers: true
     feign-config:
       path: /config/**
-      serviceId: config-server
+      serviceId: crawler-config
       strip-prefix: true
       custom-sensitive-headers: true
     feign-zipkin:
       path: /zipkin/**
-      serviceId: zipkin-server
+      serviceId: crawler-zipkin
+      strip-prefix: true
+      custom-sensitive-headers: true
+    feign-tx:
+      path: /tx/**
+      serviceId: tx-manage
       strip-prefix: true
       custom-sensitive-headers: true
   host:

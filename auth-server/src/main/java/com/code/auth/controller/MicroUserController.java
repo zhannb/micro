@@ -24,6 +24,7 @@ public class MicroUserController {
      */
     @RequestMapping("/user")
     public Principal principalUser(Principal principal) {
+        log.info("principal:{}",principal);
         return principal;
     }
 

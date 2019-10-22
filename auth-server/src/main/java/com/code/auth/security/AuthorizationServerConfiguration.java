@@ -37,7 +37,7 @@ import java.util.Map;
 //@Order(3)
 public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
-    private static final String DEMO_RESOURCE_ID = "mall-resource-test";
+    private static final String DEMO_RESOURCE_ID = "test";
 
     @Autowired
     AuthenticationManager authenticationManager;
@@ -51,13 +51,13 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
         clients.inMemory().withClient("client_1")
                 .resourceIds(DEMO_RESOURCE_ID)
                 .authorizedGrantTypes("client_credentials", "refresh_token")
-                .scopes()
+                .scopes("xx")
                 .authorities("client")
                 .secret("123456")
                 .and()
                 .withClient("client_2")
                 .resourceIds(DEMO_RESOURCE_ID)
-                .scopes()
+                .scopes("xx")
                 .authorizedGrantTypes("password", "authorization_code", "refresh_token") //此客户端可以使用的授权类型，默认为空。
                 .authorities()
                 .secret("123456");

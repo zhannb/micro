@@ -37,9 +37,9 @@ public class MicroUserUtil {
      */
     public  static MicroUser getCurrentUser(){
 
-        Authentication authentication = SecurityContextHolder
+        Object principal = SecurityContextHolder
                 .getContext()
-                .getAuthentication();
+                .getAuthentication().getPrincipal();
 
         MicroUser o = (MicroUser)SecurityContextHolder
                 .getContext()

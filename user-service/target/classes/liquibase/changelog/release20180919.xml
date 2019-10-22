@@ -23,5 +23,15 @@
             <column name="desc" type="varchar(50)" remarks="描述"/>
         </createTable>
     </changeSet>
+    <changeSet id="201908081042002" author="liang.liu">
+        <dropColumn tableName="micro_test" columnName="desc"/>
+        <dropColumn tableName="micro_test_i18n" columnName="desc"/>
+        <addColumn tableName="micro_test">
+            <column name="description" type="varchar(50)" remarks="描述"/>
+        </addColumn>
+        <addColumn tableName="micro_test_i18n">
+            <column name="description" type="varchar(50)" remarks="描述"/>
+        </addColumn>
+    </changeSet>
 
 </databaseChangeLog>
