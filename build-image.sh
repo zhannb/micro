@@ -35,36 +35,5 @@ mvn clean package -Dmaven.test.skip=true docker:build
 
 cd ..
 
-cd config-server
-
-mvn clean package -Dmaven.test.skip=true docker:build
-
-cd ..
-
-cd tx-lcn/txlcn-tm
-
-mvn clean package -Dmaven.test.skip=true docker:build
-
-cd ..
-cd ..
-
-
-cd zipkin-server
-
-mvn clean package -Dmaven.test.skip=true docker:build
-
-cd ..
-
-cd user-service
-
-mvn clean package -Dmaven.test.skip=true docker:build
-
-cd ..
-
-cd order-service
-
-mvn clean package -Dmaven.test.skip=true docker:build
-
-cd ..
 
 echo 'docker images build over...'

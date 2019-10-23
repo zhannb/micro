@@ -28,54 +28,54 @@ services:
       - "7774:7774"
     depends_on:
       - crawler-eureka
-
-  crawler-config:
-    image: springcloud/crawler-config
-    restart: always
-    container_name: crawler-config
-    hostname: crawler-config
-    ports:
-      - "7771:7771"
-    depends_on:
-      - crawler-eureka
-
-  crawler-tm:
-    image: springcloud/crawler-tm
-    restart: always
-    container_name: crawler-tm
-    hostname: crawler-tm
-    ports:
-      - "7970:7970"
-    depends_on:
-      - crawler-eureka
-
-  crawler-zipkin:
-    image: springcloud/crawler-zipkin
-    restart: always
-    container_name: crawler-zipkin
-    hostname: crawler-zipkin
-    ports:
-      - "7773:7773"
-    depends_on:
-      - crawler-eureka
-
-  user-service:
-    image: springcloud/user-service
-    restart: always
-    container_name: user-service
-    hostname: user-service
-    ports:
-      - "7775:7775"
-    depends_on:
-      - crawler-eureka
-
-  order-service:
-    image: springcloud/order-service
-    restart: always
-    container_name: order-service
-    hostname: order-service
-    ports:
-      - "7778:7778"
-    depends_on:
-      - crawler-eureka
+#
+#  crawler-config:
+#    image: springcloud/crawler-config
+#    restart: always
+#    container_name: crawler-config
+#    hostname: crawler-config
+#    ports:
+#      - "7771:7771"
+#    depends_on:
+#      - crawler-eureka
+#
+#  crawler-tm:
+#    image: springcloud/crawler-tm
+#    restart: always
+#    container_name: crawler-tm
+#    hostname: crawler-tm
+#    ports:
+#      - "7970:7970"
+#    depends_on:
+#      - crawler-eureka
+#
+#  crawler-zipkin:
+#    image: springcloud/crawler-zipkin
+#    restart: always
+#    container_name: crawler-zipkin
+#    hostname: crawler-zipkin
+#    ports:
+#      - "7773:7773"
+#    depends_on:
+#      - crawler-eureka
+#
+#  user-service:
+#    image: springcloud/user-service
+#    restart: always
+#    container_name: user-service
+#    hostname: user-service
+#    ports:
+#      - "7775:7775"
+#    depends_on:
+#      - crawler-eureka
+#
+#  order-service:
+#    image: springcloud/order-service
+#    restart: always
+#    container_name: order-service
+#    hostname: order-service
+#    ports:
+#      - "7778:7778"
+#    depends_on:
+#      - crawler-eureka
 #    working_dir: /usr/local/tomcat/project/micro-oauth/
