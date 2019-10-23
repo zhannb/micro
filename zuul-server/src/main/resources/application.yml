@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: crawler-zuul
+server:
+  port: 7772

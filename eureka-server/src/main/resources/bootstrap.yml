@@ -1,14 +1,14 @@
-server:
-  port: 7770
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://localhost:7770/eureka/
-
-spring:
-  application:
-    name: crawler-eureka
+#server:
+#  port: 7770
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+#    serviceUrl:
+#      defaultZone: http://localhost:7770/eureka/
+#
+#spring:
+#  application:
+#    name: crawler-eureka

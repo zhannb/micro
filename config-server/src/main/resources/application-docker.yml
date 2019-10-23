@@ -1,8 +1,4 @@
-server:
-  port: 7771
 spring:
-  application:
-    name: crawler-config
   cloud:
     config:
       enabled: true
@@ -21,7 +17,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7770/eureka/
+      defaultZone: http://crawler-eureka:7770/eureka/
 management:
   endpoints:
     web:

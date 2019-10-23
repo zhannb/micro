@@ -1,0 +1,20 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7770/eureka/
+
+spring:
+  security:
+    user:
+      name: root
+      password: 123456
+  datasource:
+    url: jdbc:mysql://www.iamcrawler.cn:3306/micro?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name:  com.mysql.jdbc.Driver
+  redis:
+    host: www.iamcrawler.cn
+    port: 6379
+    password: 123456
+    database: 0

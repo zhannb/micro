@@ -1,0 +1,60 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://crawler-eureka:7770/eureka/
+
+spring:
+  datasource:
+    url: jdbc:mysql://www.iamcrawler.cn:3306/micro_user?serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name:  com.mysql.jdbc.Driver
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: www.iamcrawler.cn
+    port: 5672
+    username: liuliang
+    password: liuliang
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0 # 采用比例，默认 0.1 全部采样 1.0
+  zipkin:
+    base-url: http://crawler-zipkin:7773/ # 指定了Zipkin服务器的地址
+  liquibase:
+    change-log: classpath:liquibase\master.xml
+#feign:
+#  hystrix:
+#    enabled: true
+
+security:
+  oauth2:
+    resource:
+      id: test
+      user-info-uri: http://crawler-auth:7772/auth/user
+      #      token-info-uri: http://localhost:7772/auth/oauth/check_token
+      #      user-authorization-uri: http://localhost:7772/auth/oauth/authorize
+      prefer-token-info: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+tx-lcn:
+  client:
+    manager-address: http://crawler-tm:8070
+
+logging:
+  level:
+    com:
+      codingapi:
+        txlcn: debug
+
+
+
+

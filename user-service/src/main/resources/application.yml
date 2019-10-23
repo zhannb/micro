@@ -1,0 +1,12 @@
+server:
+  port: 7775
+spring:
+  application:
+    name: crawler-user
+
+mybatis-plus:
+  type-aliases-package: com.code.user.entity
+  mapper-locations: classpath:com/code/user/mapper/*.xml
+  type-handlers-package: com.code.user.mapper.typehandler
+
+

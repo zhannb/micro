@@ -1,78 +1,78 @@
-spring:
-  application:
-    name: crawler-zuul
-  datasource:
-    url: jdbc:mysql://www.iamcrawler.cn:3306/micro?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC
-    username: root
-    password: 123456
-    driver-class-name:  com.mysql.jdbc.Driver
-  redis:
-    host: www.iamcrawler.cn
-    port: 6379
-    password:
-    database: 1
-  sleuth:
-    web:
-      client:
-        enabled: true
-    sampler:
-      probability: 1.0 # 采用比例，默认 0.1 全部采样 1.0
-  zipkin:
-    base-url: http://crawler-zipkin:7773/ # 指定了Zipkin服务器的地址
-server:
-  port: 7772
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:7770/eureka/
-
-
-zuul:
-  routes:
-    feign-auth:
-      path: /auth/**
-      serviceId: crawler-auth
-      strip-prefix: true
-      custom-sensitive-headers: true
-    feign-user:
-      path: /user/**
-      serviceId: crawler-user
-      strip-prefix: true
-      custom-sensitive-headers: true
-    feign-order:
-      path: /order/**
-      serviceId: crawler-order
-      strip-prefix: true
-      custom-sensitive-headers: true
-    feign-config:
-      path: /config/**
-      serviceId: crawler-config
-      strip-prefix: true
-      custom-sensitive-headers: true
-    feign-zipkin:
-      path: /zipkin/**
-      serviceId: crawler-zipkin
-      strip-prefix: true
-      custom-sensitive-headers: true
-    feign-tx:
-      path: /tx/**
-      serviceId: tx-manage
-      strip-prefix: true
-      custom-sensitive-headers: true
-  host:
-    connect-timeout-millis: 60000 #HTTP连接超时要比Hystrix的大
-    socket-timeout-millis: 60000   #socket超时
-
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
-
-
-ribbon:
-  ReadTimeout: 100000
-  ConnectTimeout: 100000
+#spring:
+#  application:
+#    name: crawler-zuul
+#  datasource:
+#    url: jdbc:mysql://www.iamcrawler.cn:3306/micro?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC
+#    username: root
+#    password: 123456
+#    driver-class-name:  com.mysql.jdbc.Driver
+#  redis:
+#    host: www.iamcrawler.cn
+#    port: 6379
+#    password:
+#    database: 1
+#  sleuth:
+#    web:
+#      client:
+#        enabled: true
+#    sampler:
+#      probability: 1.0 # 采用比例，默认 0.1 全部采样 1.0
+#  zipkin:
+#    base-url: http://crawler-zipkin:7773/ # 指定了Zipkin服务器的地址
+#server:
+#  port: 7772
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:7770/eureka/
+#
+#
+#zuul:
+#  routes:
+#    feign-auth:
+#      path: /auth/**
+#      serviceId: crawler-auth
+#      strip-prefix: true
+#      custom-sensitive-headers: true
+#    feign-user:
+#      path: /user/**
+#      serviceId: crawler-user
+#      strip-prefix: true
+#      custom-sensitive-headers: true
+#    feign-order:
+#      path: /order/**
+#      serviceId: crawler-order
+#      strip-prefix: true
+#      custom-sensitive-headers: true
+#    feign-config:
+#      path: /config/**
+#      serviceId: crawler-config
+#      strip-prefix: true
+#      custom-sensitive-headers: true
+#    feign-zipkin:
+#      path: /zipkin/**
+#      serviceId: crawler-zipkin
+#      strip-prefix: true
+#      custom-sensitive-headers: true
+#    feign-tx:
+#      path: /tx/**
+#      serviceId: tx-manage
+#      strip-prefix: true
+#      custom-sensitive-headers: true
+#  host:
+#    connect-timeout-millis: 60000 #HTTP连接超时要比Hystrix的大
+#    socket-timeout-millis: 60000   #socket超时
+#
+#
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 60000
+#
+#
+#ribbon:
+#  ReadTimeout: 100000
+#  ConnectTimeout: 100000
